@@ -1,0 +1,12 @@
+extends layout
+
+block content
+  body
+    h1= title
+    form(action = "/new" method = "POST")
+        div(class = "inputForm")
+            textarea(name = "message_content" placeholder = "Enter Message" rows = "4" cols = "80" required)
+            br
+            input(name = "message_user" placeholder = "Enter Username" type = "text" size = "30" required)
+            br
+            input(class = "inputForm_submit" type = "Submit" value = "Submit")

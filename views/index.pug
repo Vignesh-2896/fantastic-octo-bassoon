@@ -1,5 +1,11 @@
 extends layout
 
 block content
-  h1= title
-  p Welcome to #{title}
+  body
+    h1 Jedi Message Board
+    a(href="/new") Add New Message ! 
+    each message in messages
+      div(class = "messageType")
+        h3 #{message.text} - #{message.user}
+        h4 #{message.added.toLocaleTimeString()} - #{message.added.getDate()}/#{message.added.getMonth()}/#{message.added.getFullYear()} 
+  
