@@ -7,5 +7,5 @@ block content
     each message in messages
       div(class = "messageType")
         h3 #{message.text} - #{message.user}
-        h4 #{message.added.toLocaleTimeString()} - #{message.added.getDate()}/#{message.added.getMonth()}/#{message.added.getFullYear()} 
+        h4 #{message.added.toLocaleTimeString()} - #{message.added.getDate()}/#{message.added.getMonth()+1}/#{message.added.getFullYear()} 
   
